@@ -11,7 +11,7 @@ RUN apk --no-cache add\
                         libev-dev \
                         libtool \
                         libffi-dev            && \
-    apk --no-cache --virtual .build-deps \
+    apk add --no-cache --virtual .build-deps \
                         git \
                         make \
                         py3-pip \
