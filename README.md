@@ -17,8 +17,15 @@ git clone https://github.com/Isaccliberty/Dockernode.git
 在configs中按照说明调整好你的各项参数，然后
 
 ```sh
-docker build -t panel/node:latest .
-docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node --network=host panel/node
+docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node --network=host issacc/dockernode
+```
+
+如果需要更改自己的配置文件，只需停止运行的容器
+
+```sh
+docker stop node
 ```
 
 目前只经过了build和连通性测试，最终的生产环境中还需要更多的样本
+
+已添加至DockerHub
