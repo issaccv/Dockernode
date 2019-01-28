@@ -20,6 +20,12 @@ git clone https://github.com/Isaccliberty/Dockernode.git
 docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node --network=host issacc/dockernode
 ```
 
+如果你追求极致的精简或者希望使用python 2.7.15运行
+
+```sh
+docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node --network=host issacc/dockernode:dev
+```
+
 如果需要更改自己的配置文件，只需停止运行的容器
 
 ```sh
