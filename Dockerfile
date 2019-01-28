@@ -6,12 +6,7 @@ RUN apk --no-cache add\
                         openssl-dev \
                         udns-dev             && \
     apk add --no-cache --virtual .build-deps \
-                        git \
-                        make \
-                        autoconf \
-                        automake \
-                        build-base \
-                        linux-headers         && \
+                        git          && \
      git clone https://github.com/Ehco1996/shadowsocksr.git "/root/shadowsocks" --depth 1 && \
      cd  /root/shadowsocks                    && \
      pip install --upgrade pip                && \
