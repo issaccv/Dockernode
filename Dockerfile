@@ -1,10 +1,8 @@
-FROM python:3-alpine
+FROM python:2-alpine
 LABEL maintainer="Issacc <8qllyhy@gmail.com>"
 RUN apk --no-cache add\
-                        curl \
                         libsodium-dev \
-                        openssl-dev \
-                        udns-dev             && \
+                        openssl-dev  && \
     apk add --no-cache --virtual .build-deps \
                         git          && \
      git clone https://github.com/Ehco1996/shadowsocksr.git "/root/shadowsocks" --depth 1 && \
@@ -16,4 +14,4 @@ RUN apk --no-cache add\
 
 WORKDIR /root/shadowsocks
 
-CMD python /root/shadowsocks/server.py
+CMD ["python","/root/shadowsocks/server.py"] 
