@@ -18,7 +18,7 @@ git clone https://github.com/Isaccliberty/Dockernode.git
 
 ```sh
 docker build -t panel/node:latest .
-docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node panel/node
+docker run -d -v ~/Dockernode/configs:/root/shadowsocks/configs --restart=always --name=node --network=host panel/node
 ```
 
 目前只经过了build和连通性测试，最终的生产环境中还需要更多的样本
