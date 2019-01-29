@@ -7,8 +7,8 @@ RUN apk --no-cache add\
                         git          && \
      git clone https://github.com/Ehco1996/shadowsocksr.git "/root/shadowsocks" --depth 1 && \
      cd  /root/shadowsocks                    && \
-     pip install --upgrade pip                && \
-     pip install -r requirements.txt          && \
+     pip install --no-cache-dir --upgrade pip                && \
+     pip install --no-cache-dir -r requirements.txt          && \
      rm -rf ~/.cache && touch /etc/hosts.deny && \
      apk del --purge .build-deps
 
