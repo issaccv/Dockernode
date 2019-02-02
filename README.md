@@ -34,4 +34,12 @@ docker stop node
 
 目前只经过了build和连通性测试，最终的生产环境中还需要更多的样本
 
+一键安装配置脚本（不推荐）
+
+```sh
+sudo bash node_install.sh
+```
+
+
+
 已添加至DockerHub
