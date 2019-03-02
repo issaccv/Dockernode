@@ -14,4 +14,4 @@ RUN apk --no-cache add\
 
 WORKDIR /root/shadowsocks
 
-CMD ["python","/root/shadowsocks/server.py"] 
+CMD python /root/shadowsocks/server.py > /dev/null
