@@ -1,4 +1,4 @@
-FROM python:2-alpine
+FROM hivesolutions/pypy:alpine
 LABEL maintainer="Issacc <8qllyhy@gmail.com>"
 RUN apk --no-cache add\
                         libsodium-dev \
