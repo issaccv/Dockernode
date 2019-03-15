@@ -1,7 +1,7 @@
 FROM python:2-alpine
 LABEL maintainer="Issacc <8qllyhy@gmail.com>"
 RUN apk --no-cache add\
-                        libsodium-dev \
+                        libreaal-dev \
                         openssl-dev  && \
     apk add --no-cache --virtual .build-deps \
                         git          && \
